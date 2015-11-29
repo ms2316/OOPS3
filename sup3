@@ -1,0 +1,25 @@
+Task 1
+
+Java Generics do not support the use of primitive types because java compiler casts parameterised types to "Object" class, which is impossible in case 
+with primitives since primmitives do not extend Object class unlike other classes. Basically, at compile time compiler checks if a programmer has done bullshit,
+like added to a generic List<Integer> an object of the other type. Assuming that there were not generics adding object of another type would be perfectly fine since 
+add method accepts argument of type object(and since all classes are inherited from class object then this is fine). In the case with primitives this is not possible because
+primitives simply cannot be casted to object class since they do not extend it.
+
+
+Task 2
+
+
+
+class Car extends Object {
+
+}
+
+class LinkedList {
+
+  add(Object o) {
+  
+  }
+}
+
+list.add( (Object)car )
