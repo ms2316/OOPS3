@@ -2,15 +2,15 @@ public class CyberPetFactory {
 
   public CyberPet makeCyberPet(String pet, String name) {
     
-    if (pet == "Dog") {
+    if ( pet.equals("Dog") ) {
     
       return new CyberPetDog(name);
       
-    } else if (pet == "Cat") {
+    } else if ( pet.equals("Cat") ) {
     
       return new CyberPetCat(name);
       
-    } else if (pet == "Politician") {
+    } else if ( pet.equals("Politician") ) {
     
       return new CyberPetPolitician(name);
       

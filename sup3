@@ -135,5 +135,13 @@ Mis using Inheritance
 1. Using inheritance to utilize base class members even when there is no clear 'type of' relationship.
 2. Extending a tremendous amount of subclasses rather than implementing different design patterns(e.g. decorator, strategy patterns)
 
+
 Task 10
+
+On paper. Will show during supervision.
+
+Task 11
+
+Code
+
 

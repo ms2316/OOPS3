@@ -1,7 +1,7 @@
 interface UserInterface {
-
+ 
+  public void play();
   public void requestAction();
   public void displayGameState();
-  public boolean quit();
   
 }

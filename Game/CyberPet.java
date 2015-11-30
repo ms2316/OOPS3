@@ -10,8 +10,8 @@ public abstract class CyberPet {
   public void setHappiness(int newHappiness) { happiness = newHappiness; }
   public void adjustHappiness(int value) { happiness += value; }
 
-  public boolean isTired() {
-    return (happiness < 0);
+  public boolean isHappy() {
+    return (happiness >= 0);
   }
   
   public abstract void sleep();
