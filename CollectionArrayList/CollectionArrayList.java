@@ -1,7 +1,9 @@
-package java.util;
-
 import java.io.IOException;
 import java.lang.IndexOutOfBoundsException;
+import java.util.AbstractList; 
+import java.util.List;
+import java.util.Collection;
+import java.util.Iterator;
 
 //mutable List of constant size
 public class CollectionArrayList<E> extends AbstractList<E> 

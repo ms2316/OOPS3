@@ -9,17 +9,71 @@ primitives simply cannot be casted to object class since they do not extend it.
 
 Task 2
 
+code
+
+Task 3
+
+First, two different object are created of type String. Reference s1 points to the first one while ref s2 to the second. Comparing s1 and s2 gives false
+because the comparison of references takes place. In the first case references are different since they point to different objects.
+In the second example object of type string "Hi" is created and reference s3 is assigned to point to this object. However, when assigning a reffered object
+so s4 reference new object is not created, since compiler notices that there is already that kind of object created, so s4 points to the same place
+in memory as s3. Hence comparison of s3 and s4 yields true since references are the same.
+
+Task 4
+
+code
+
+Task 5
+
+State pattern is one of the behavioral design patterns that is used when an object changes its behavior based on its internal state. In state pattern
+we create objects that represent various states and a context object whose behavior varies depending on its state. Basically, there is a state interface
+and various classes that implement this interface(which represent different states). In the context object there is a ref to state interface(class), which represents current state (any implemented state).
+Context methods invoke some functionality depending on current state.
+While strategy pattern is used when we want to change behaviour of an object at runtime.
+i.e. use different implementation of a particular method at runtime.
+
+Task 6
+
+Decorator pattern is used with Reader in java. BufferedReader and other readers can wrap around Reader class to decorate it. Other readers can again
+wrap around the resulting reader to get even more functionality.
+
+Questions about decorator pattern (Googling didnt help much):
+1. Perhaps its better to use another abstract class instead of interface? because we could identify the object then(i.e. its last wrap).
+2. How can we use old functionality? ie methods that only the wrapped object has?
 
 
-class Car extends Object {
+Task 7
 
-}
+Singleton pattern is a type of pattern that is used when we want only one instance(or no instances) of an object to exist at any time.
+Singleton pattern look like this: 
 
-class LinkedList {
-
-  add(Object o) {
+public class Singleton {
   
+  private static Singleton instance = null;
+  
+  private Singleton(){ }
+
+  public static Singleton getInstance() {
+    if (instance == null) {
+      instance = new Singleton();
+    }
+    
+    return instance;
   }
+  
 }
 
-list.add( (Object)car )
+
+Adv: 
+Ensures there is only one instance of the singleton class throughout the lifetime of the application(useful with login, connection type problems)
+Using Lazy instantiation of singleton(as provided above) helps save resources if singleton class is resource intense.(ie doesnt use resources until creation aka first instantiation)
+
+Disadv:
+No inheritance, since oterwise there would be multiple instances of a class which contradicts with the idea of singleton class.
+Singleton hides dependencies making it impossible to conduct unit tests.
+
+Task 8
+
+
+
+
