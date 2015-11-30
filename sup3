@@ -74,6 +74,66 @@ Singleton hides dependencies making it impossible to conduct unit tests.
 
 Task 8
 
+Factory design pattern. The idea behind factory pattern is that we create object without exposing the creation logic to the user
+and refer to newly created object using a common base class or interface.
+
+public interface Shape {
+   void draw();
+}
+
+public class Rectangle implements Shape {
+   @Override
+   public void draw() {
+      System.out.println("Inside Rectangle::draw() method.");
+   }
+}
+
+public class Square implements Shape {
+
+   @Override
+   public void draw() {
+      System.out.println("Inside Square::draw() method.");
+   }
+}
+
+public class Circle implements Shape {
+
+   @Override
+   public void draw() {
+      System.out.println("Inside Circle::draw() method.");
+   }
+}
+
+public class ShapeFactory {
+	
+   public Shape getShape(String shapeType){
+      if(shapeType == null){
+         return null;
+      }		
+      if(shapeType.equalsIgnoreCase("CIRCLE")){
+         return new Circle();
+         
+      } else if(shapeType.equalsIgnoreCase("RECTANGLE")){
+         return new Rectangle();
+         
+      } else if(shapeType.equalsIgnoreCase("SQUARE")){
+         return new Square();
+      }
+      
+      return null;
+   }
+}
+
+Here, using ShapeFactory we can get new objects by simply calling getShape method with an argument of type string(what type of obj we want).
+This pattern allows us to hide(absctract from) the creation logic.
 
 
+Task 9
+
+Mis using Inheritance
+
+1. Using inheritance to utilize base class members even when there is no clear 'type of' relationship.
+2. Extending a tremendous amount of subclasses rather than implementing different design patterns(e.g. decorator, strategy patterns)
+
+Task 10
 
